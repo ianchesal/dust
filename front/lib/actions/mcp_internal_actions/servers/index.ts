@@ -6,6 +6,7 @@ import { default as askAgentServer } from "@app/lib/actions/mcp_internal_actions
 import { default as generateFileServer } from "@app/lib/actions/mcp_internal_actions/servers/file_generation";
 import { default as githubServer } from "@app/lib/actions/mcp_internal_actions/servers/github";
 import { default as hubspotServer } from "@app/lib/actions/mcp_internal_actions/servers/hubspot/server";
+import { default as incidentIoServer } from "@app/lib/actions/mcp_internal_actions/servers/incident_io";
 import { default as imageGenerationDallEServer } from "@app/lib/actions/mcp_internal_actions/servers/image_generation";
 import { default as includeDataServer } from "@app/lib/actions/mcp_internal_actions/servers/include";
 import { default as notionServer } from "@app/lib/actions/mcp_internal_actions/servers/notion";
@@ -37,6 +38,8 @@ export async function getInternalMCPServer(
       return githubServer(auth, mcpServerId);
     case "hubspot":
       return hubspotServer(auth, mcpServerId);
+    case "incident_io":
+      return incidentIoServer(auth, mcpServerId);
     case "image_generation":
       return imageGenerationDallEServer(auth);
     case "file_generation":

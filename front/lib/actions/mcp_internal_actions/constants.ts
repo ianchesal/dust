@@ -13,6 +13,7 @@ export const AVAILABLE_INTERNAL_MCP_SERVER_NAMES = [
   "file_generation",
   "github",
   "hubspot",
+  "incident_io",
   "image_generation",
   "include_data",
   "notion",
@@ -125,6 +126,15 @@ export const INTERNAL_MCP_SERVERS: Record<
       retrieve_page: "never_ask",
       retrieve_database_schema: "never_ask",
       search: "never_ask",
+    },
+  },
+  incident_io: {
+    id: 12,
+    availability: "manual",
+    flag: "dev_mcp_actions",
+    tools_stakes: {
+      list_incident_updates_v2: "never_ask",
+      show_incident_v2: "never_ask",
     },
   },
 
